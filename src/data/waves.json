@@ -1,0 +1,12 @@
+[
+  { "boats": 1, "soldiersPerBoat": 4, "helis": 0 },
+  { "boats": 1, "soldiersPerBoat": 5, "helis": 1 },
+  { "boats": 2, "soldiersPerBoat": 4, "helis": 1 },
+  { "boats": 2, "soldiersPerBoat": 5, "helis": 2 },
+  { "boats": 2, "soldiersPerBoat": 6, "helis": 2 },
+  { "boats": 3, "soldiersPerBoat": 5, "helis": 2 },
+  { "boats": 3, "soldiersPerBoat": 5, "helis": 3 },
+  { "boats": 3, "soldiersPerBoat": 6, "helis": 3 },
+  { "boats": 4, "soldiersPerBoat": 6, "helis": 3 },
+  { "boats": 4, "soldiersPerBoat": 6, "helis": 4 }
+]

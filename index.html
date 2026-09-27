@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>抢滩：海滩防线</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="vignette"></div>
+
+  <div id="crosshair" class="hidden">
+    <span class="ch-v"></span>
+    <span class="ch-h"></span>
+  </div>
+
+  <div id="fps" class="hidden"></div>
+  <div id="score" class="hidden">0</div>
+  <div id="wave-label" class="hidden"></div>
+
+  <div id="basehp-wrap" class="hidden">
+    <span class="hp-label">基地</span>
+    <div id="basehp-bar"><div id="basehp-fill"></div></div>
+  </div>
+
+  <div id="heat-wrap" class="hidden">
+    <span class="heat-label">枪管</span>
+    <div id="heat-bar"><div id="heat-fill"></div></div>
+    <div id="overheat" class="hidden">⚠ 枪管过热</div>
+  </div>
+
+  <div id="weapon-panel" class="hidden">
+    <div class="wp-item" data-w="mg"><span class="wp-key">1</span>机枪 <span class="wp-ammo">∞</span></div>
+    <div class="wp-item" data-w="rocket"><span class="wp-key">2</span>火箭 <span class="wp-ammo" id="ammo-rocket">8</span></div>
+    <div class="wp-item" data-w="grenade"><span class="wp-key">3</span>手雷 <span class="wp-ammo" id="ammo-grenade">6</span></div>
+  </div>
+
+  <div id="wave-banner" class="hidden"></div>
+
+  <div id="overlay">
+    <div class="panel">
+      <h1>抢滩 · 海滩防线</h1>
+      <p class="sub" id="overlay-sub">Beach Defense</p>
+      <ul>
+        <li>鼠标 — 旋转炮台（可 360° 环视）</li>
+        <li>左键按住 — 开火（机枪注意过热）</li>
+        <li>1 / 2 / 3 — 切换 机枪 / 火箭 / 手雷</li>
+        <li>Esc — 暂停 / 释放鼠标</li>
+      </ul>
+      <button id="start-btn">开始防守</button>
+    </div>
+  </div>
+
+  <div id="shop" class="hidden">
+    <div class="panel">
+      <h2 id="shop-title">阵地已肃清</h2>
+      <p class="sub">选择一项补给（每波限一次）</p>
+      <div class="shop-options">
+        <button class="shop-btn" data-pick="rocket">🚀 火箭弹 +6</button>
+        <button class="shop-btn" data-pick="grenade">💣 手雷 +4</button>
+        <button class="shop-btn" data-pick="repair">🔧 维修基地 +40</button>
+      </div>
+      <button id="next-wave-btn">迎击下一波 ▶</button>
+    </div>
+  </div>
+
+  <div id="gameover" class="hidden">
+    <div class="panel">
+      <h1 class="go-title">阵地失守</h1>
+      <p class="go-line">坚守到第 <b id="final-wave">1</b> 波</p>
+      <p class="go-line">最终得分 <b id="final-score">0</b></p>
+      <button id="restart-btn">再来一局</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
